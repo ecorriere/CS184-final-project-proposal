@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+    border-style: double;
+    border-color: blue;
+  }
+  h1, h1, h1, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 WaterSim Proposal</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184 Final Proposal: Water Simulation</h1>
+
+<h2><u> Title, Summary and Team Members </u></h2>
+
+<p> Our group will design a water simulator capable of realistically rendering water reacting to various forces over time. The water will be particle based and particle movement will depend both on other particles, solid objects, and other forces (such as tidal forces) in the scene </p>
+
+<p> Our team is: </p>
+
+<ul> 
+    <li> Evan Corirere </li>
+    <li> Jade Signh </li>
+    <li> Jack Coyle </li> 
+</ul>
+
+<h2><u> Problem Description </u></h2>
+
+<p> We wanted to create a real time water simulation project because we were inspired by some of the example projects that were shown in lecture.  Generally, fluid simulation is an important problem in computer graphics because it is used to create a sense of realism in all sorts of graphics applications, like video games, movies, and VR/AR.  This problem is going to be very challenging for us because our group has no prior experience in physical simulations, so a lot of it is going to be very new for us.  However, since project 4 does involve some physical simulations with cloth, we are planning to try to use the code for that project as a stepping stone for our final project.  In terms of the approach that we’re going to take to complete this simulation, we’re planning to use a particle system to simulate the water, and use particle system animations to create the motion of the water, in a very similar manner to the particle-based fluid example that was used in lecture.  </p>
+
+
+<h2> <u>Goals and Deliverables</u> </h2>
+
+<p> Our baseline plan includes completion of a somewhat realistic water simulation in which we simulate the movement of water in a small box-like area given initial conditions and forces. A deliverable corresponding to this goal would be an animation that shows water moving back and forth in the box (with waves), as well as interaction between water and some solid objects within the box. </p>
+
+<h4> What we plan to deliver: </h4> 
+
+<p> On top of the baseline plan, we aim to deliver a project that can simulate water evaporation effects as well as provide a relatively realistic ocean scene, including having waves of differing strengths and putting some sea animals in the scene. Additionally, we may allow the user to add new forces to the scene. </p>
+
+<h4> How we will measure quality: </h4> 
+
+<p> One of the ways we will measure quality is simply by judging how realistic our simulation looks compared to both our own knowledge of how water looks and videos we find online. </p>
+
+<h4> How we will measure performance: </h4>
+
+<p> Since we would like our water simulation to be rendered in real time, our main concern with performance is that we are able to continuously render with reasonable quality in real time. If the animation appears slower than real water we will focus on optimizations and faster methods. </p>
+
+<h4> Questions we plan to answer with our analysis: </h4>
+
+<ul>
+    <li> How is implementing a fluid simulation in a black box (i.e. no external forces) different from simulating waves and ocean water? </li>
+    <li> What forces are at play in our simulation? </li>
+    <li> How do we balance water’s cohesive properties with the fact that we will be representing it using individual particles? Water tends to stick to itself, but it also should be able to come apart unlike a generic mass and spring system. </li>
+
+</ul>
+
+<h2> <u>Schedule </u> </h2>
+
+<h4> Week 1: April 12 - April 18 </h4> 
+<ul>
+    <li> Independently finish the cloth simulation project (project 4) </li>
+    <li> Determine how we can use our project 4 code as a stepping stone for our final project </li>
+    <li> Research fluid simulation to get some ideas for how to start the project and begin outlining the data structures and general components that we will need  </li>
+</ul>
+
+<h4> Week 2: April 19 - April 25 </h4>
+
+<ul>
+    <li>Begin implementing the data structures and other general components of our baseline goal</li>
+    <li>Work to finish the baseline code</li>
+    <li> Begin writing the report</li>
+
+</ul>
+
+<h4> Week 3: April 26 - May 2</h4>
+
+<ul>
+    <li> Make the milestone video and slides </li>
+    <li> Wrap up the baseline deliverable and discuss how to integrate our stretch goals in order of importance </li>
+    <li> Add all information related to our baseline deliverable to the report, so that even if we don’t finish any additional stretch goals, our report is complete</li>
+    <li> Begin working on stretch goals </li>
+</ul>
+
+<h4> Week 4: May 3 - May 7</h4>
+
+<ul>
+    <li> Wrap up the stretch goals that we were able to make meaningful progress on</li>
+    <li> Finish the report and recording all deliverables </li>
+    <li> Write up the presentation slides and prepare for the presentation </li>
+</ul>
+
+<h2><u> Resources </u> </h2>
+
+<p>We plan to build off of the project 4 code, since cloth simulation is very connected to fluid simulation. We will use C++ on macOS and XCode. </p>
+
+<p> The following are some of the relevant research papers and websites we will also use as guidance: </p>
+
+<ul>
+    <li><a href="http://www.cse.iitd.ernet.in/~cs5080212/MiniP.pdf">Real-time Water Simulation</a></li>
+    <li><a href="https://www.britannica.com/science/Navier-Stokes-equation">Navier-Stokes equation</a></li>
+    <li><a href="https://fileadmin.cs.lth.se/graphics/theses/projects/projgrid/projgrid-lq.pdf">Real-time Water Rendering</a></li>
+    <li><a href="https://hal.inria.fr/inria-00443630/file/article-1.pdf"> Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF</a></li>
+    <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.9102&rep=rep1&type=pdf">Simulating Water (Jerry Tessendorf)</a></li>
+</ul>
+
+</body>
+</html>
